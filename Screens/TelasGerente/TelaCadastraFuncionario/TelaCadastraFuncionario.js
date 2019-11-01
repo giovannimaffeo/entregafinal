@@ -29,7 +29,7 @@ import {
 import { createAppContainer, } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 
-export default function TelaCadastraFuncionarios(){
+export default function TelaCadastraFuncionarios({ navigation }){
     return(
 
         <View style={styles.container}>
@@ -62,7 +62,7 @@ export default function TelaCadastraFuncionarios(){
 
                 <Button
                     title = "Confirmar"
-                    onPress = {() => this.props.navigation.goBack()}
+                    onPress = {() => navigation.goBack()}
                 />
 
             </View>

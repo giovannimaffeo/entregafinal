@@ -12,6 +12,7 @@ import {
   StyleSheet,
   ScrollView,
   View,
+  Button,
   Text,
   StatusBar,
   TouchableOpacity
@@ -28,12 +29,23 @@ import {
 import ComponenteTexto from './ComponenteTexto'
 
 
-export default function TelaTipoUsuario(){
+export default function TelaTipoUsuario({ navigation }){
   return(
 
-    <TouchableOpacity onPress={() => }>
-      <Text>Oi</Text>
-    </TouchableOpacity>
+    <View>
+
+      <Button title = "Gerente" 
+      onPress = {() => navigation.navigate('TelaMenu')}
+      />
+
+      <Button title = "Funcionário"
+      onPress = {() => navigation.navigate('TelaLogin')}
+      />
+
+
+
+
+    </View>
 
 
 

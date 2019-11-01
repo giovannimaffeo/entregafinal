@@ -18,6 +18,8 @@ import {
   TextInput,
 } from 'react-native';
 
+
+
 import {
   Header,
   LearnMoreLinks,
@@ -29,7 +31,7 @@ import {
 import { createAppContainer, } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 
-export default function TelaAlteraEvolucao(){
+export default function TelaAlteraEvolucao({ navigation }){
     return(
 
         <View style={styles.container}>
@@ -41,7 +43,7 @@ export default function TelaAlteraEvolucao(){
             <View>
 
                 <TextInput 
-                    placeholder = "Meta que você deseja alterar a Evolução"
+                    placeholder = "Qual meta você deseja alterar a evolução?"
                 />
 
                 <TextInput 
@@ -54,7 +56,7 @@ export default function TelaAlteraEvolucao(){
 
                 <Button
                     title = "Confirmar"
-                    onPress = {() => this.props.navigation.goBack()}
+                    onPress = {() => navigation.goBack()}
                 />
 
             </View>

@@ -29,7 +29,7 @@ import {
 import { createAppContainer, } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 
-export default function TelaLogin(){
+export default function TelaLogin({ navigation }){
     return(
 
         <View>
@@ -54,7 +54,7 @@ export default function TelaLogin(){
 
                 <Button
                     title = "Confirmar"
-                    onPress = {() => this.props.navigation.navigate('TelaInformacoes')}
+                    onPress = {() => navigation.navigate('TelaInformacoes')}
                 />
 
             </View>

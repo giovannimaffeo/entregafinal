@@ -43,10 +43,6 @@ export default function TelaInformacoes(){
             </View>
 
             <View>
-                <Text>Função dentro da Empresa</Text>
-            </View>
-
-            <View>
                 <Text>Trabalho/Projeto</Text>
             </View>
 

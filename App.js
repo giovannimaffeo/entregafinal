@@ -24,21 +24,56 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-import { createAppContainer, createStackNavigator } from 'react-navigation';
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
 
 import TelaMenu from './Screens/TelasGerente/TelaMenu/TelaMenu'
+import TelaAlteraEvolucao from './Screens/TelasGerente/TelaAlteraEvolucao/TelaAlteraEvolucao'
+import TelaAssociaTrabalho from './Screens/TelasGerente/TelaAssociaTrabalho/TelaAssociaTrabalho'
 import TelaCadastraMetas from './Screens/TelasGerente/TelaCadastraMetas/TelaCadastraMetas'
+import TelaCadastraFuncionarios from './Screens/TelasGerente/TelaCadastraFuncionario/TelaCadastraFuncionario'
+
+import TelaTipoUsuario from './Screens/TelaTipoUsuario/TelaTipoUsuario'
+
+import TelaLogin from './Screens/TelasFuncionario/TelaLogin/TelaLogin'
+import TelaInformacoes from './Screens/TelasFuncionario/TelaInformacoes/TelaInformacoes'
 
 const AppNavigator = createStackNavigator (
   {
-    Home: {
+    TelaMenu: {
       screen: TelaMenu
     },
-    Page2: {
+    TelaCadastraMetas: {
       screen: TelaCadastraMetas
     },
+    TelaCadastraFuncionario:{
+      screen: TelaCadastraFuncionarios
+    },
+    TelaAlteraEvolucao:{
+      screen: TelaAlteraEvolucao
+    },
+    TelaAssociaTrabalho:{
+      screen: TelaAssociaTrabalho
+    },
+    TelaTipoUsuario:{
+      screen: TelaTipoUsuario
+    },
+    TelaLogin:{
+      screen: TelaLogin
+    },
+    TelaInformacoes:{
+      screen: TelaInformacoes
+    },
+    
+    
 
-  }
+  
+  },
+  {
+    initialRouteName: 'TelaTipoUsuario'
+  },
+
+
 
 
 );

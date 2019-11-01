@@ -26,10 +26,10 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-/* import { createAppContainer, } from 'react-navigation';
-import { createStackNavigator } from 'react-navigation-stack'; */
+import { createAppContainer, } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack'; 
 
-export default function TelaCadastraMetas(){
+export default function TelaCadastraMetas({ navigation }){
     return(
 
         <View style={styles.container}>
@@ -68,7 +68,7 @@ export default function TelaCadastraMetas(){
 
                 <Button
                     title = "Confirmar"
-                    onPress = {() => this.props.navigation.goBack()}
+                    onPress = {() => navigation.goBack()}
                 />
 
             </View>

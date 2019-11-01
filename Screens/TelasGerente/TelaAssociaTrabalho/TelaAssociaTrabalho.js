@@ -26,10 +26,10 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-/*import { createAppContainer, } from 'react-navigation';
-import { createStackNavigator } from 'react-navigation-stack';*/
+import { createAppContainer, } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
 
-export default function TelaAssociaTrabalho(){
+export default function TelaAssociaTrabalho({ navigation }){
     return(
 
         <View style={styles.container}>
@@ -54,7 +54,7 @@ export default function TelaAssociaTrabalho(){
 
                 <Button
                     title = "Confirmar"
-                    onPress = {() => this.props.navigation.goBack()}
+                    onPress = {() => navigation.goBack()}
                 />
 
             </View>
