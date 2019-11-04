@@ -25,9 +25,8 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 import { createAppContainer, createStackNavigator } from 'react-navigation';
-
-import TelaMenu from './Screens/TelasGerente/TelaMenu/TelaMenu'
-import TelaCadastraMetas from './Screens/TelasGerente/TelaCadastraMetas/TelaCadastraMetas'
+import TelaMenu from './src/Screens/TelasGerente/TelaMenu/TelaMenu';
+import TelaCadastraMetas from '/src/Screens/TelasGerente/TelaCadastraMetas/TelaCadastraMetas';
 
 const AppNavigator = createStackNavigator (
   {

@@ -1,8 +1,15 @@
 import React from 'react';
 import {Text,StyleSheet,View,Image,TextInput,TouchableOpacity,ScrollView,Alert,Button} from 'react-native';
 import {screenWidth, screenHeight} from './src/constants/dimensions';
-
-//GARANTIR QUE OS TEXTOS FIQUEM BEM ESPAÇADOS//
+import { createAppContainer, } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
+import {
+    Header,
+    LearnMoreLinks,
+    Colors,
+    DebugInstructions,
+    ReloadInstructions,
+  } from 'react-native/Libraries/NewAppScreen';
 
 
 export default function Funcionario() {

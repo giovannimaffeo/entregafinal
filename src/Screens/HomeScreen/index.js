@@ -1,8 +1,17 @@
 import React from 'react';
 import {View, Text,TouchableOpacity,StyleSheet, Alert,Image} from 'react-native';
 import {screenWidth, screenHeight} from './src/constants/dimensions';
+import { createAppContainer, } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
+import {
+    Header,
+    LearnMoreLinks,
+    Colors,
+    DebugInstructions,
+    ReloadInstructions,
+  } from 'react-native/Libraries/NewAppScreen';
 
-const HomeScreen = () => {
+export default function HomeScreen () {
     return (
         // Container //
         <View style={styles.container}>
@@ -41,6 +50,7 @@ const HomeScreen = () => {
         </View>
 
 )};
+
 const styles = StyleSheet.create({
 
     //VIEWS//
@@ -115,4 +125,4 @@ const styles = StyleSheet.create({
 })       
     
 
-export default HomeScreen;
+
