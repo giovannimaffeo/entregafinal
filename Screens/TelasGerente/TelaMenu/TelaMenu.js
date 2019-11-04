@@ -17,6 +17,7 @@ import {
   Button, 
   StatusBar,
   Image,
+  TouchableOpacity
 } from 'react-native';
 
 import {
@@ -29,12 +30,15 @@ import {
 
 import { createAppContainer, } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+
+import {screenWidth, screenHeight} from '../../../src/constants/dimensions';
+
+
 
 export default function TelaMenu({ navigation }){
     return(
 
-        <View style={{flex: 1, backgroundColor: "#b3ffe7"}}>
+        <View style={{flex: 1}}>
   
             <View style={styles.container}>
 
@@ -46,9 +50,24 @@ export default function TelaMenu({ navigation }){
 
                 <View style={{ marginTop: 40, justifyContent: "center" }}>
 
-                    <TouchableOpacity style = {styles.botao} onPress = {() => navigation.navigate('TelaCadastraMetas')} >
+                    <View style={styles.icones}>
                         
-                        <Text style={styles.textobotao}>Cadastrar Meta</Text>
+                        <Image source ={require('../../../src/assets/icones/Alvo.png')} />
+                        <Image source ={require('../../../src/assets/icones/gravata.png')} />
+                        <Image source ={require('../../../src/assets/icones/maleta.png')} />
+                        <Image source ={require('../../../src/assets/icones/pessoaTerno.png')} />
+                       
+
+
+
+
+
+                    </View>
+
+
+                    <TouchableOpacity style = {styles.botao} onPress = {() => navigation.navigate('TelaCadastraMetas')} >
+            
+                            <Text style={styles.textobotao}>Cadastrar Meta</Text>
                     
                     </TouchableOpacity>
                     
@@ -83,12 +102,19 @@ export default function TelaMenu({ navigation }){
 
 const styles = StyleSheet.create({
 
+    icones:{
+        flexDirection: "row",
+        justifyContent: "space-evenly",
+        alignItems: "center",
+
+    },
+
     container: {
-        height: 500,
+        height: screenHeight*0.73,
         borderRadius: 25,
         justifyContent: "center",
-        marginHorizontal: 60, 
-        marginVertical: 30
+        marginHorizontal: 60,
+        marginVertical: screenHeight*0.06,
 
     },
     
@@ -105,9 +131,9 @@ const styles = StyleSheet.create({
     
     botao: {
         flexDirection: "row",
-        height: 50,
+        height: screenHeight*0.073,
         justifyContent: "center",
-        backgroundColor: "#33ffbb",
+        backgroundColor:'#4dffdb',
         alignItems: "center",
         borderRadius: 20,
         marginHorizontal: 20,
@@ -116,5 +142,6 @@ const styles = StyleSheet.create({
 
     textobotao: {
         fontSize: 15,
+        fontWeight: 'bold',
     }
 })

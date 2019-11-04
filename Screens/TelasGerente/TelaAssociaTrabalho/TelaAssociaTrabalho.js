@@ -56,7 +56,7 @@ const DATA = [
 export default function TelaAssociaTrabalho({ navigation }){
     return(
 
-      <View style={{flex: 1, backgroundColor: "#b3ffe7"}}>
+      <View style={{flex: 1}}>
         
         <SectionList
 
@@ -64,7 +64,7 @@ export default function TelaAssociaTrabalho({ navigation }){
 
             keyExtractor = { (item, index ) => item + index }
         
-            renderItem = { ({ item }) => <View style={{marginHorizontal: 60, marginTop: 10}}><Button color="#00e69d" title = {item} onPress = {() => navigation.navigate('TelaEscolheFuncionarios')}/></View> }
+            renderItem = { ({ item }) => <View style={{marginHorizontal: 60, marginTop: 10}}><Button color="#4dffdb" title = {item} onPress = {() => navigation.navigate('TelaEscolheFuncionarios')}/></View> }
 
             renderSectionHeader = { ({ section: { descricao } }) => <View style={styles.header}><Text style={{fontSize: 25, color: "black", fontWeight: "bold"}} >{ descricao }</Text></View> }
 

@@ -33,7 +33,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 export default function TelaCadastraMetas({ navigation }){
     return(
 
-        <View style={{flex: 1, backgroundColor: "#b3ffe7"}}>
+        <View style={{flex: 1}}>
 
             <View style={styles.container}>
 
@@ -63,7 +63,7 @@ export default function TelaCadastraMetas({ navigation }){
 
                     <TouchableOpacity style = {styles.botao} onPress = {() => navigation.goBack()} >
 
-                        <Text>Confirmar</Text>
+                        <Text style={{fontWeight: "bold"}}>Confirmar</Text>
 
                     </TouchableOpacity>
 
@@ -120,7 +120,7 @@ text: {
 
 input: {
     borderWidth: 2,
-    borderColor: "#33ffbb",
+    borderColor: '#4dffdb',
     borderRadius: 25,
     height: 50,
     justifyContent: "center",
@@ -133,7 +133,7 @@ botao: {
     width: 90,
     height: 50,
     justifyContent: "center",
-    backgroundColor: "#33ffbb",
+    backgroundColor:'#4dffdb',
     alignItems: "center",
     borderRadius: 20,
     marginHorizontal: 20,

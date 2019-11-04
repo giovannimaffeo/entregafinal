@@ -36,12 +36,20 @@ import TelaAssociaTarefaMeta from './Screens/TelasGerente/TelaAssociaTarefaMeta/
 import TelaAdicionaTarefa from './Screens/TelasGerente/TelaAssociaTarefaMeta/TelaAdicionaTarefa'
 import TelaEscolheFuncionarios from './Screens/TelasGerente/TelaAssociaTrabalho/TelaEscolheFuncionarios'
 
+import Homescreen from './src/Screens/HomeScreen/index'
+import Cadastro from './src/Screens/Cadastro/index'
+import Login from './src/Screens/Login/index'
+import TelaFuncionario from './src/Screens/TelaFuncionario/index'
+
 
 
 import TelaTipoUsuario from './Screens/TelaTipoUsuario/TelaTipoUsuario'
 
 import TelaLogin from './Screens/TelasFuncionario/TelaLogin/TelaLogin'
 import TelaInformacoes from './Screens/TelasFuncionario/TelaInformacoes/TelaInformacoes'
+
+/* As dimensoes em algumas telas nao estao definidas, pedimos que utilize o PIXEL XL API 28 para 
+visualizar com sucesso. */ 
 
 const AppNavigator = createStackNavigator (
   {
@@ -75,6 +83,18 @@ const AppNavigator = createStackNavigator (
     TelaEscolheFuncionarios:{
       screen: TelaEscolheFuncionarios
     },
+    Homescreen: {
+      screen: Homescreen
+    },
+    Cadastro:{
+      screen: Cadastro
+    },
+    Login:{
+      screen: Login
+    },
+    TelaFuncionario:{
+      screen: TelaFuncionario
+    },
     
     
     
@@ -82,7 +102,7 @@ const AppNavigator = createStackNavigator (
   
   },
   {
-    initialRouteName: 'TelaTipoUsuario'
+    initialRouteName: 'Homescreen'
   },
 
 

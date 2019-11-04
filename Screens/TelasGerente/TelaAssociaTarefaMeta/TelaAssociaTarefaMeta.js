@@ -68,7 +68,7 @@ export default function TelaCadastraMetas({ navigation }){
 
                     data = {DATA}
 
-                    renderItem = { ({item}) =>  <TouchableOpacity onPress = { () => navigation.navigate('TelaAdicionaTarefa') } style = {styles.botao} ><Text>{item.descricao}</Text></TouchableOpacity> }
+                    renderItem = { ({item}) =>  <TouchableOpacity onPress = { () => navigation.navigate('TelaAdicionaTarefa') } style = {styles.botao} ><Text style={{fontWeight: "bold"}}>{item.descricao}</Text></TouchableOpacity> }
 
                     keyExtractor = { (item, index ) => index }
 
@@ -86,7 +86,6 @@ const styles = StyleSheet.create({
 
 container: {
     flex: 1,
-    backgroundColor: "#b3ffe7",
     borderColor: "black",
     
 },
@@ -95,7 +94,7 @@ botao: {
         
     height: 50,
     justifyContent: "center",
-    backgroundColor: "#33ffbb",
+    backgroundColor: "#4dffdb",
     alignItems: "center",
     borderRadius: 20,
     marginHorizontal: 20,

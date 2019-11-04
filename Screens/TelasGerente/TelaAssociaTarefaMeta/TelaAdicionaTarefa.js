@@ -36,11 +36,15 @@ import TelaAssociaTarefaMeta from './TelaAssociaTarefaMeta';
 export default function TelaAdicionaTarefa({ navigation }){
     return(
 
-        <View style={{flex: 1, backgroundColor: "#b3ffe7"}}>
+        <View style={{flex: 1}}>
 
             <View style={styles.container}>
 
-                <View>
+                <View style={styles.header}>
+                    <Text style={styles.text}>Adicionar Tarefa</Text>
+                </View>
+
+                <View style={{marginTop: 40}}>
 
                     <TextInput 
                         placeholder = "Tarefa para adicionar"
@@ -53,13 +57,13 @@ export default function TelaAdicionaTarefa({ navigation }){
 
                     <TouchableOpacity onPress = { () => navigation.navigate('TelaMenu') } style={styles.botao} >
                         
-                        <Text>Finalizar</Text>
+                        <Text style={{fontWeight: "bold"}}>Finalizar</Text>
 
                     </TouchableOpacity>
 
                     <TouchableOpacity onPress = { () => navigation.goBack() } style={styles.botao} >
 
-                        <Text>Adicionar mais uma tarefa</Text>
+                        <Text style={{fontWeight: "bold"}}>Adicionar mais uma tarefa</Text>
 
                     </TouchableOpacity>
 
@@ -74,6 +78,18 @@ export default function TelaAdicionaTarefa({ navigation }){
 
 
 const styles = StyleSheet.create({
+
+    header: {
+        alignItems: "center",
+    }, 
+
+    text: {
+        color: "black",
+        fontWeight: 'bold',
+        fontSize: 23,
+    
+    },
+    
 
     container: {
         height: 500,
@@ -94,7 +110,7 @@ text: {
 input: {
     
     borderWidth: 2,
-    borderColor: "#33ffbb",
+    borderColor: "#4dffdb",
     borderRadius: 25,
     height: 50,
     justifyContent: "center",
@@ -109,7 +125,7 @@ botao: {
     padding:20,
     height: 50,
     justifyContent: "center",
-    backgroundColor: "#33ffbb",
+    backgroundColor: "#4dffdb",
     alignItems: "center",
     borderRadius: 20,
     marginHorizontal: 5,

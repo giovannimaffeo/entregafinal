@@ -36,31 +36,39 @@ import { createStackNavigator } from 'react-navigation-stack';
 export default function TelaEscolheFuncionarios({ navigation }){
     return(
 
-        <View style={{flex: 1, backgroundColor: "#b3ffe7"}}>
+        <View style={{flex: 1}}>
             
             <View style = {styles.container} >
 
-                <View style = {styles.input}>
+                <View style={styles.header}>
+                    <Text style={styles.text}>Adicionar Tarefa</Text>
+                </View>
 
-                    <TextInput 
-                        placeholder = "Nome ou matrícula do funcionário"
-                    />
+                <View style={{marginTop:40}}>
 
-                </ View>
+                    <View style = {styles.input}>
 
-                <View style = {{flexDirection: "row"}}>
+                        <TextInput 
+                            placeholder = "Nome ou matrícula do funcionário"
+                        />
 
-                        <TouchableOpacity style= {styles.botao} onPress = { () => navigation.navigate('TelaMenu') }>
-                            
-                            <Text>Confirmar</Text>
+                    </ View>
 
-                        </TouchableOpacity>
+                    <View style = {{flexDirection: "row"}}>
 
-                        <TouchableOpacity style={styles.botao} onPress = { () => navigation.goBack() } >
+                            <TouchableOpacity style= {styles.botao} onPress = { () => navigation.navigate('TelaMenu') }>
+                                
+                                <Text style={{fontWeight: "bold"}}>Finalizar</Text>
 
-                            <Text>Adicionar mais uma tarefa</Text>
+                            </TouchableOpacity>
 
-                        </TouchableOpacity>
+                            <TouchableOpacity style={styles.botao} onPress = { () => navigation.goBack() } >
+
+                                <Text style={{fontWeight: "bold"}}>Adicionar mais uma tarefa</Text>
+
+                            </TouchableOpacity>
+
+                    </View>
 
                 </View>
 
@@ -74,6 +82,10 @@ export default function TelaEscolheFuncionarios({ navigation }){
 
 
 const styles = StyleSheet.create({
+
+header: {
+    alignItems: "center",
+}, 
 
 container: {
     height: 500,
@@ -94,7 +106,7 @@ text: {
 input: {
     
     borderWidth: 2,
-    borderColor: "#33ffbb",
+    borderColor: "#4dffdb",
     borderRadius: 25,
     height: 50,
     justifyContent: "center",
@@ -109,7 +121,7 @@ botao: {
     padding:20,
     height: 50,
     justifyContent: "center",
-    backgroundColor: "#33ffbb",
+    backgroundColor: "#4dffdb",
     alignItems: "center",
     borderRadius: 20,
     marginHorizontal: 5,
