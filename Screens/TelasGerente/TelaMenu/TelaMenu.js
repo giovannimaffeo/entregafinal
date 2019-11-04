@@ -16,6 +16,7 @@ import {
   Text,
   Button, 
   StatusBar,
+  Image,
 } from 'react-native';
 
 import {
@@ -103,7 +104,7 @@ const styles = StyleSheet.create({
     },
     
     botao: {
-        
+        flexDirection: "row",
         height: 50,
         justifyContent: "center",
         backgroundColor: "#33ffbb",
