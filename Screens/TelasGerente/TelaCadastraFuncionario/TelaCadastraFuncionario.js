@@ -16,6 +16,7 @@ import {
   Button, 
   StatusBar,
   TextInput,
+  TouchableOpacity,
 } from 'react-native';
 
 import {
@@ -29,80 +30,105 @@ import {
 import { createAppContainer, } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 
-export default function TelaCadastraFuncionarios({ navigation }){
+export default function TelaAssociaTrabalho({ navigation }){
     return(
 
-        <View style={styles.container}>
+        <View style={{flex: 1, backgroundColor: "#b3ffe7"}}>
 
-            <View style={styles.textbox}>
-                <Text style={styles.text}>Cadastro de Funcionários</Text>
-            </View>
+            <View style={styles.container}>
 
-            <View>
+                <View style={styles.header}>
 
-                <TextInput 
-                    placeholder = "Nome Completo do Funcionário"
-                />
+                    <Text style={styles.text}>Cadastro de Funcionários</Text>
 
-                <TextInput 
-                    placeholder = "Matrícula do Funcionário"
-                />
+                </View>
 
-                <TextInput 
-                    placeholder = "Função do Funcionário na Empresa"
-                />
+                <View style={{marginTop: 40}}>
 
-                <TextInput 
-                    placeholder = "Senha do Funcionário"
-                />
+                    <TextInput 
+                        placeholder = "Nome Completo do Funcionário"
+                        style = {styles.input}
+                    />
 
-            </View>
+                    <TextInput
+                        style = {styles.input} 
+                        placeholder = "Matrícula do Funcionário"
+                    />
 
-            <View>
+                    <TextInput 
+                        style = {styles.input}
+                        placeholder = "Função na Empresa do Funcionário"
+                    />
 
-                <Button
-                    title = "Confirmar"
-                    onPress = {() => navigation.goBack()}
-                />
+                </View>
+
+                <View style={{marginTop: 5, alignItems: "flex-end"}}>
+
+                    <TouchableOpacity onPress = {() => navigation.goBack()} style={styles.botao} >
+
+                        <Text>Confirmar</Text>
+    
+                    </TouchableOpacity>
+
+                </View>
 
             </View>
 
         </View>
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     );
 }
+
 
 const styles = StyleSheet.create({
 
     container: {
-        margin: 50,
-        borderColor: "black",
+        height: 500,
+        borderRadius: 25,
         justifyContent: "center",
-        alignItems: "center",
+        marginHorizontal: 60, 
+        marginVertical: 30
     },
+
+    header: {
+        alignItems: "center",
+    }, 
     
     text: {
         color: "black",
         fontWeight: 'bold',
-        fontSize: 30,
+        fontSize: 25,
     
     },
     
     textbox: {
         alignItems: "center",
+    },
+
+    input: {
+    
+        borderWidth: 2,
+        borderColor: "#33ffbb",
+        borderRadius: 25,
+        height: 50,
+        justifyContent: "center",
+        alignItems: "center",
+        marginHorizontal: 20,
+        marginVertical: 5,
+        
+    },
+
+    botao: {
+    
+        padding:20,
+        height: 50,
+        justifyContent: "center",
+        backgroundColor: "#33ffbb",
+        alignItems: "center",
+        borderRadius: 20,
+        marginHorizontal: 5,
+        marginVertical: 5,
+    
     },
     
     textogrande: {

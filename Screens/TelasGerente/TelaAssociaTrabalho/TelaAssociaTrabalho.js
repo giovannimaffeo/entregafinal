@@ -1,3 +1,4 @@
+
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
@@ -16,6 +17,9 @@ import {
   Button, 
   StatusBar,
   TextInput,
+  FlatList,
+  SectionList,
+  TouchableOpacity,
 } from 'react-native';
 
 import {
@@ -26,40 +30,47 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+
 import { createAppContainer, } from 'react-navigation';
-import { createStackNavigator } from 'react-navigation-stack';
+import { createStackNavigator } from 'react-navigation-stack'; 
+
+const DATA = [
+    {
+      descricao: 'Aumentar a produtividade',
+      data: ['Comprar mais máquinas', 'Otimizar o Tempo'],
+      prazo: '3 meses'
+    },
+    {
+      descricao: 'Melhorar processos',
+      data: ['Estudar outras indústrias'],
+      prazo: '2 meses'
+    },
+    {
+      descricao: 'Reduzir gastos com energia',
+      data: ['Comprar placas fotovoltáicas', 'Trocar por LED', 'Seguir o manual de boas práticas'],
+      prazo: 'sem prazo'
+    },
+  ];
+
 
 export default function TelaAssociaTrabalho({ navigation }){
     return(
 
-        <View style={styles.container}>
+      <View style={{flex: 1, backgroundColor: "#b3ffe7"}}>
+        
+        <SectionList
 
-            <View style={styles.textbox}>
-                <Text style={styles.text}>Associação de Projetos aos funcionários</Text>
-            </View>
+            sections = {DATA}
 
-            <View>
+            keyExtractor = { (item, index ) => item + index }
+        
+            renderItem = { ({ item }) => <View style={{marginHorizontal: 60, marginTop: 10}}><Button color="#00e69d" title = {item} onPress = {() => navigation.navigate('TelaEscolheFuncionarios')}/></View> }
 
-                <TextInput 
-                    placeholder = "Projeto que você deseja Associar Funcionários"
-                />
+            renderSectionHeader = { ({ section: { descricao } }) => <View style={styles.header}><Text style={{fontSize: 25, color: "black", fontWeight: "bold"}} >{ descricao }</Text></View> }
 
-                <TextInput 
-                    placeholder = "Funcionários para Associar (Exemplo: Felipe Silva, Arnaldo Lima, ..., Pedro Costa)"
-                />
+        />
 
-            </View>
-
-            <View>
-
-                <Button
-                    title = "Confirmar"
-                    onPress = {() => navigation.goBack()}
-                />
-
-            </View>
-
-        </View>
+      </View> 
     
     );
 }
@@ -67,27 +78,45 @@ export default function TelaAssociaTrabalho({ navigation }){
 
 const styles = StyleSheet.create({
 
-    container: {
-        margin: 50,
-        borderColor: "black",
-        justifyContent: "center",
-        alignItems: "center",
-    },
+  header: {
+    alignItems: "center",
+    marginHorizontal: 30,
+    marginTop: 25,
     
-    text: {
-        color: "black",
-        alignItems: "center",
-        fontWeight: 'bold',
-        fontSize: 30,
-    
-    },
-    
-    textbox: {
-        alignItems: "center",
-        justifyContent: "center",
-    },
-    
-    textogrande: {
-        //colocar wrap
-    }
+  
+}, 
+
+  bordaBotao: {
+    backgroundColor: "#33ffbb",
+  },
+
+  text: {
+    color: "black",
+    fontWeight: 'bold',
+    fontSize: 20,
+
+},
+
+container: {
+    margin: 50,
+    borderColor: "black",
+    justifyContent: "center",
+    alignItems: "center",
+},
+
+text: {
+    color: "black",
+    fontWeight: 'bold',
+    fontSize: 30,
+
+},
+
+textbox: {
+    alignItems: "center",
+},
+
+textogrande: {
+    //colocar wrap
+}
+
 })

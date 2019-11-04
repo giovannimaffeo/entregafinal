@@ -28,39 +28,50 @@ import {
 
 import { createAppContainer, } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 export default function TelaMenu({ navigation }){
     return(
+
+        <View style={{flex: 1, backgroundColor: "#b3ffe7"}}>
   
-        <View style={styles.container}>
+            <View style={styles.container}>
 
-            <View>
+                <View style={styles.header}>
 
-            <Text style={styles.text}>O que você deseja fazer?</Text>
+                    <Text style={styles.text}>O que você deseja fazer?</Text>
 
-            </View>
+                </View>
 
-            <View>
+                <View style={{ marginTop: 40, justifyContent: "center" }}>
 
-                <Button
-                    title = 'Cadastrar uma Meta'
-                    onPress = {() => navigation.navigate('TelaCadastraMetas')}
-                />
+                    <TouchableOpacity style = {styles.botao} onPress = {() => navigation.navigate('TelaCadastraMetas')} >
+                        
+                        <Text style={styles.textobotao}>Cadastrar Meta</Text>
+                    
+                    </TouchableOpacity>
+                    
 
-                <Button
-                    title = 'Cadastrar Funcionário'
-                    onPress = {() => navigation.navigate('TelaCadastraFuncionario')}
-                />
+                    <TouchableOpacity style = {styles.botao} onPress = {() => navigation.navigate('TelaAssociaTarefaMeta')} >
+                        
+                        <Text style={styles.textobotao}>Adicionar Tarefas a uma Meta</Text>
+                    
+                    </TouchableOpacity>
 
-                <Button
-                    title = 'Associar Trabalho'
-                    onPress = {() => navigation.navigate('TelaAssociaTrabalho')}
-                />
+                    <TouchableOpacity style = {styles.botao} onPress = {() => navigation.navigate('TelaCadastraFuncionario')} >
+                        
+                        <Text style={styles.textobotao}>Cadastrar Funcionário</Text>
+                        
+                    </TouchableOpacity>
+                    
 
-                <Button
-                    title = 'Alterar a Evolução de uma Meta'
-                    onPress = {() => navigation.navigate('TelaAlteraEvolucao')}
-                />
+                    <TouchableOpacity style = {styles.botao} onPress = {() => navigation.navigate('TelaAssociaTrabalho')} >
+                        
+                        <Text style={styles.textobotao}>Adicionar Funcionários à Tarefa</Text>
+                        
+                    </TouchableOpacity>
+
+                </View>
 
             </View>
 
@@ -72,24 +83,37 @@ export default function TelaMenu({ navigation }){
 const styles = StyleSheet.create({
 
     container: {
-        margin: 50,
-        borderColor: "black",
+        height: 500,
+        borderRadius: 25,
         justifyContent: "center",
-        alignItems: "center",
+        marginHorizontal: 60, 
+        marginVertical: 30
+
     },
     
+    header: {
+        alignItems: "center",
+    }, 
+
     text: {
         color: "black",
         fontWeight: 'bold',
-        fontSize: 30,
+        fontSize: 23,
     
     },
     
-    textbox: {
+    botao: {
+        
+        height: 50,
+        justifyContent: "center",
+        backgroundColor: "#33ffbb",
         alignItems: "center",
+        borderRadius: 20,
+        marginHorizontal: 20,
+        marginVertical: 5,
     },
-    
-    textogrande: {
-        //colocar wrap
+
+    textobotao: {
+        fontSize: 15,
     }
 })

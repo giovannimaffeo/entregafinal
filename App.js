@@ -32,6 +32,11 @@ import TelaAlteraEvolucao from './Screens/TelasGerente/TelaAlteraEvolucao/TelaAl
 import TelaAssociaTrabalho from './Screens/TelasGerente/TelaAssociaTrabalho/TelaAssociaTrabalho'
 import TelaCadastraMetas from './Screens/TelasGerente/TelaCadastraMetas/TelaCadastraMetas'
 import TelaCadastraFuncionarios from './Screens/TelasGerente/TelaCadastraFuncionario/TelaCadastraFuncionario'
+import TelaAssociaTarefaMeta from './Screens/TelasGerente/TelaAssociaTarefaMeta/TelaAssociaTarefaMeta'
+import TelaAdicionaTarefa from './Screens/TelasGerente/TelaAssociaTarefaMeta/TelaAdicionaTarefa'
+import TelaEscolheFuncionarios from './Screens/TelasGerente/TelaAssociaTrabalho/TelaEscolheFuncionarios'
+
+
 
 import TelaTipoUsuario from './Screens/TelaTipoUsuario/TelaTipoUsuario'
 
@@ -49,9 +54,6 @@ const AppNavigator = createStackNavigator (
     TelaCadastraFuncionario:{
       screen: TelaCadastraFuncionarios
     },
-    TelaAlteraEvolucao:{
-      screen: TelaAlteraEvolucao
-    },
     TelaAssociaTrabalho:{
       screen: TelaAssociaTrabalho
     },
@@ -64,6 +66,16 @@ const AppNavigator = createStackNavigator (
     TelaInformacoes:{
       screen: TelaInformacoes
     },
+    TelaAssociaTarefaMeta:{
+      screen: TelaAssociaTarefaMeta
+    },
+    TelaAdicionaTarefa:{
+      screen: TelaAdicionaTarefa
+    },
+    TelaEscolheFuncionarios:{
+      screen: TelaEscolheFuncionarios
+    },
+    
     
     
 
